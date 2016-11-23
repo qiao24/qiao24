@@ -1,0 +1,65 @@
+@import url(ql_base.css);
+.saolei{
+	/*width: 410px;
+	height :410px;*/
+	margin:0 auto;
+	box-shadow: 0 0 10px black;
+	position: fixed;
+	left:50%;
+	top:0;
+	overflow:hidden;
+}
+.block{
+	width: 40px;
+	height:40px;
+	float :left;
+	/*margin-left: -1px;
+	margin-top: -1px;*/
+	margin:5px;
+	-webkit-transition:all 0.5s ease;
+	line-height: 40px;
+	text-align: center;
+	font-family: 'Arial';
+	font-size: 14px;
+	color: #fff;
+	cursor: pointer;
+}
+.zhezhao{
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: black;
+	display: none;
+	opacity: 0.8;
+	z-index: 5000;
+	-webkit-transition:all 1s ease-in-out;
+	-webkit-transform:scale(0.1,0.1);
+	/*margin-top: -440px*/
+
+}
+body{
+	background: url('../images/a.jpg') no-repeat center center;
+	background-size:cover; 
+	height: 880px;
+}
+#game{
+	font-size: 24px;
+	color: #fff;
+	z-index: 10000;
+	position: absolute;
+	top: 45%;
+	left:50%;
+	margin-left: -60px;
+}
+#restart{
+	font-size: 24px;
+	color: #fff;
+	z-index: 10000;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	cursor: pointer;
+	margin-left: -40px;
+}

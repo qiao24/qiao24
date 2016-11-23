@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/jquery-1.11.2.js"></script>
+    <style>
+        body{
+            background-image: url("images/b.png");
+            background-size:cover;
+        }
+        .clock{
+            width: 200px;
+            height: 200px;
+            border: 5px solid #ccc;
+            border-radius: 50%;
+            background: -webkit-radial-gradient(#ffffff,#eeeeee);
+            margin: 230px auto;
+            position: relative;
+        }
+    </style>
+    <script>
+        $(function(){
+            var clock=$('.clock');
+            //划分刻度
+            var time=new Date();
+            var h=drawpointer(40,5,'#000',time.getHours()*30+time.getMinutes()*6/12-90);
+            var m=drawpointer(60,4,'blue',time.getMinutes()*6-90);
+            var s=drawpointer(80,3,'red',time.getSeconds()*6-90);
+            drawdian()
+            drawmark();
+            setInterval(function(){
+                var time=new Date();
+                h.css({transform:'rotate('+(time.getHours()*30+time.getMinutes()*6/12-90)+'deg)'});
+                m.css({transform:'rotate('+(time.getMinutes()*6-90)+'deg)'});
+                s.css({transform:'rotate('+(time.getSeconds()*6-90)+'deg)'});
+            },1000)
+            function drawmark(){
+                for(var i=0;i<60;i++){
+                    var widths;
+                    var heights;
+                    if(i%5==0){
+                        widths=3;
+                        heights=8;
+                    }else{
+                        widths=3;
+                        heights=3;
+                    }
+                    var point=$('<div>').css({
+                        width:widths+'px',height:heights+'px',position:'absolute',top:0,left:'50%',background:'#000',transform:'rotate('+i*6+'deg)',transformOrigin:'0 100px'}).appendTo(clock);
+                }
+            }
+            function drawpointer(w,h,c,a){
+                var div=$('<div>').css({
+                    width:w,height:h,transform:'rotate('+a+'deg)',transformOrigin:'left center',position:'absolute',top:'50%',left:'50%',background:c
+                }).appendTo(clock);
+                return div;
+            }
+            function drawdian(){
+                var div=$('<div>').css({
+                    width:10,height:10,borderRadius:'50%',background:'#000',position:'absolute',top:'48%',left:'48%'
+                }).appendTo(clock);
+            }
+        })
+    </script>
+</head>
+<body>
+<div class="clock">
+    <!--<li id="sec"></li>-->
+    <!--<li id="hour"></li>-->
+    <!--<li id="min"></li>-->
+</div>
+</body>
+</html>
