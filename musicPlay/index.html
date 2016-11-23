@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	</head>
+	<body>
+		<div class="page_box">
+			<div class="page_slide page_slide1 hide">
+				<ul>
+					<li class="leftTop">
+						<p class="userImg"><img src="img/left/touxiang.jpg"></p>
+						<p class="userTxt"><span>点击头像登录</span><br><span>共收藏<span id="musicNum">0</span>首歌曲</span></p>
+					</li>
+					<li><img src="img/left/sao.png">扫描歌曲</li>
+					<li><img src="img/left/shunxu.png">顺序播放</li>
+					<li><img src="img/left/yinxiao.png">音效</li>
+					<li><img src="img/left/skin.png">换皮肤</li>
+					<li><img src="img/left/bg.png">换背景</li>
+					<li><img src="img/left/sleep.png">睡眠</li>
+					<li><img src="img/left/set.png">设置</li>
+					<li><img src="img/left/exit.png">退出</li>
+				</ul>
+			</div>
+			<div class="page_slide page_slide2 show">
+				<header >
+					<div>我的音乐</div>
+					<div ><img src="img/search.png"/></div>
+					<div ><img src="img/earch.png"/></div>
+				</header>
+				<ul class="musicList" id="musicList">
+					<!--<li data-icon="url"><span  data-href="url">歌曲1</span></li>
+					<li data-icon="url" data-href="url">歌曲1</li>
+					<li data-icon="url" data-href="url">歌曲1</li>
+					<li data-icon="url" data-href="url">歌曲1</li>
+					<li data-icon="url" data-href="url">歌曲1</li>
+					<li data-icon="url" data-href="url">歌曲1</li>
+					<li data-icon="url" data-href="url">歌曲1</li>
+					<li data-icon="url" data-href="url">歌曲1</li>
+					<li data-icon="url" data-href="url">歌曲1</li>-->
+				</ul>
+				<span id="showTime"/>00:00</span>
+				<audio src="" class="music" id="music"></audio>
+				<input type="range" class="range" min=0/>
+				<footer>
+					<div class="peoImg"><img src="img/zhangLiangYing.png"></div>
+				<div class="pre"><img src="img/pre.png"></div>
+				<div class="stop"><img src="img/left/stop.png"></div>
+				<div class="next"><img src="img/next.png"></div>
+				<div class="love">❤</div>
+				</footer>
+			</div>
+		</div>
+		
+	</body>
+	<script type="text/javascript" src="js/zepto.js" ></script>
+	<!--<script src="js/zepto.min.js" type="text/javascript" charset="utf-8"></script>-->
+	<script src="js/touchFunction.js" type="text/javascript" charset="utf-8"></script>
+</html>
